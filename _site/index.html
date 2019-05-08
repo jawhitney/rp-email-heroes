@@ -6,27 +6,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Email Heroes">
 
-<link rel="icon" href="/email-heroes/favicon.ico">
-<link rel="apple-touch-icon" sizes="57x57" href="/email-heroes/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/email-heroes/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/email-heroes/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/email-heroes/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/email-heroes/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/email-heroes/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/email-heroes/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/email-heroes/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/email-heroes/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/email-heroes/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/email-heroes/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/email-heroes/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/email-heroes/favicon-16x16.png">
-<link rel="manifest" href="/email-heroes/manifest.json">
+<link rel="icon" href="/rp-email-heroes/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/rp-email-heroes/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/rp-email-heroes/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/rp-email-heroes/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/rp-email-heroes/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/rp-email-heroes/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/rp-email-heroes/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/rp-email-heroes/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/rp-email-heroes/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/rp-email-heroes/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/rp-email-heroes/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/rp-email-heroes/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/rp-email-heroes/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/rp-email-heroes/favicon-16x16.png">
+<link rel="manifest" href="/rp-email-heroes/manifest.json">
 <meta name="msapplication-TileColor" content="#007fa2">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#007fa2">
 
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-<link rel="stylesheet" href="/email-heroes/css/style.css">
+<link rel="stylesheet" href="/rp-email-heroes/css/style.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <title>Email Heroes</title>
@@ -35,7 +35,7 @@
     <body>
         <header>
     <div class="container flex">
-        <a id="logo" href="/email-heroes/"><img src="/email-heroes/assets/logo.svg" alt="Logo" /></a>
+        <a id="logo" href="/rp-email-heroes/"><img src="/rp-email-heroes/assets/logo.svg" alt="Logo" /></a>
         <div>
             <a href="http://linkedin.com/in/jonathanawhitney" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="http://github.com/jawhitney" target="_blank"><i class="fab fa-github"></i></a>
@@ -59,7 +59,7 @@
         <p>Email heroes recognize the power of email and will stop at nothing to make sure their emails land in the inbox. In a world where businesses rely on email to reach customers and drive sales every email campaign has the power to impact the bottom line, so delivery failures can be crushing. Building a five-star email program is no easy feat. Email heroes know they must combine engaging content with deliverability know-how to achieve maximum impact.</p>
         <p>Ready to try out your email hero powers? Test your flight skills in this high flying game to ensure your emails make it to the inbox.</p>
         <a href="#" id="rpGameLaunch">
-            <img src="/email-heroes/assets/arcade-default.png" alt="Launch Game" />
+            <img src="/rp-email-heroes/assets/arcade-default.png" alt="Launch Game" />
         </a>
     </div>
 </section>
@@ -78,7 +78,7 @@
     var rpApp = rpApp || {},
         rpGame = rpGame || {};
 
-    rpApp.assetsPath = '/email-heroes/assets/';
+    rpApp.assetsPath = '/rp-email-heroes/assets/';
 
     rpApp.preloadAssests = {
         images: ["boss-health.png","boss.png","congrats-back.png","congrats-btn.png","congrats-heroes.png","congrats-logo.png","congrats-sun.png","controls-small.png","controls.png","enemies.png","hero-select.png","hero.png","intro-controls-gamepad.png","intro-controls.png","intro-overlay.png","level1-back.png","level1-fore.png","level1-mid.png","level2-back.png","level2-fore.png","level2-mid.png","level3-back.png","level3-fore.png","level3-mid.png","level4-back.png","level4-fore.png","level4-mid.png","obstacles.png","powerups.png","projectile.png","sun.png","super-projectile.png","text-skip-button.png","text-skip-space.png","text-skip-touch.png","textbox.png","transition-back.png","transition-fore.png","transition-mid.png","walls.png"],
@@ -115,16 +115,16 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.6.0/phaser.min.js?ver=5.1.1"></script>
-<script src="/email-heroes/assets/js/scene.js"></script>
-<script src="/email-heroes/assets/js/level.js"></script>
-<script src="/email-heroes/assets/js/demo.js"></script>
-<script src="/email-heroes/assets/js/level1.js"></script>
-<script src="/email-heroes/assets/js/level2.js"></script>
-<script src="/email-heroes/assets/js/level3.js"></script>
-<script src="/email-heroes/assets/js/level4.js"></script>
-<script src="/email-heroes/assets/js/congrats.js"></script>
-<script src="/email-heroes/assets/js/intro.js"></script>
-<script src="/email-heroes/assets/js/game.js"></script>
+<script src="/rp-email-heroes/assets/js/scene.js"></script>
+<script src="/rp-email-heroes/assets/js/level.js"></script>
+<script src="/rp-email-heroes/assets/js/demo.js"></script>
+<script src="/rp-email-heroes/assets/js/level1.js"></script>
+<script src="/rp-email-heroes/assets/js/level2.js"></script>
+<script src="/rp-email-heroes/assets/js/level3.js"></script>
+<script src="/rp-email-heroes/assets/js/level4.js"></script>
+<script src="/rp-email-heroes/assets/js/congrats.js"></script>
+<script src="/rp-email-heroes/assets/js/intro.js"></script>
+<script src="/rp-email-heroes/assets/js/game.js"></script>
 
     </body>
 </html>
