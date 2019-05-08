@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Email Heroes">
+
+<link rel="icon" href="/email-heroes/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/email-heroes/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/email-heroes/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/email-heroes/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/email-heroes/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/email-heroes/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/email-heroes/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/email-heroes/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/email-heroes/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/email-heroes/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/email-heroes/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/email-heroes/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/email-heroes/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/email-heroes/favicon-16x16.png">
+<link rel="manifest" href="/email-heroes/manifest.json">
+<meta name="msapplication-TileColor" content="#007fa2">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#007fa2">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+<link rel="stylesheet" href="/email-heroes/css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<title>Email Heroes</title>
+
+    </head>
+    <body>
+        <header>
+    <div class="container flex">
+        <a id="logo" href="/email-heroes/"><img src="/email-heroes/assets/logo.svg" alt="Logo" /></a>
+        <div>
+            <a href="http://linkedin.com/in/jonathanawhitney" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="http://github.com/jawhitney" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</header>
+<section id="hero">
+    <div class="container">
+        <h1>Email Heroes interactive game</h1>
+        <p>Created for <a href="https://returnpath.com">Return Path</a></p>
+        <p><a href="https://returnpath.com/games/email-heroes/">Game on Return Path's site</a></p>
+        <p>Built using <a href="http://phaser.io/">PhaserJS</a></p>
+        <p>Graphics created by <a href="https://jonathanfoerster.com">Jonathan Foerster</a></p>
+    </div>
+</section>
+
+        <main>
+            <section>
+    <div class="container">
+        <h2>ARE YOU AN EMAIL HERO?</h2>
+        <p>Email heroes recognize the power of email and will stop at nothing to make sure their emails land in the inbox. In a world where businesses rely on email to reach customers and drive sales every email campaign has the power to impact the bottom line, so delivery failures can be crushing. Building a five-star email program is no easy feat. Email heroes know they must combine engaging content with deliverability know-how to achieve maximum impact.</p>
+        <p>Ready to try out your email hero powers? Test your flight skills in this high flying game to ensure your emails make it to the inbox.</p>
+        <a href="#" id="rpGameLaunch">
+            <img src="/email-heroes/assets/arcade-default.png" alt="Launch Game" />
+        </a>
+    </div>
+</section>
+<div id="rpGameModal">
+    <div id="rpGameWrapper">
+        <div id="rpGame"></div>
+    </div>
+</div>
+
+        </main>
+        <footer>
+    <p><span><i class="far fa-copyright"></i>&nbsp;Jonathan Whitney </span><span id="copyrightYear"></span></p>
+</footer>
+
+<script>
+    var rpApp = rpApp || {},
+        rpGame = rpGame || {};
+
+    rpApp.assetsPath = '/email-heroes/assets/';
+
+    rpApp.preloadAssests = {
+        images: ["boss-health.png","boss.png","congrats-back.png","congrats-btn.png","congrats-heroes.png","congrats-logo.png","congrats-sun.png","controls-small.png","controls.png","enemies.png","hero-select.png","hero.png","intro-controls-gamepad.png","intro-controls.png","intro-overlay.png","level1-back.png","level1-fore.png","level1-mid.png","level2-back.png","level2-fore.png","level2-mid.png","level3-back.png","level3-fore.png","level3-mid.png","level4-back.png","level4-fore.png","level4-mid.png","obstacles.png","powerups.png","projectile.png","sun.png","super-projectile.png","text-skip-button.png","text-skip-space.png","text-skip-touch.png","textbox.png","transition-back.png","transition-fore.png","transition-mid.png","walls.png"],
+        mp3: ["collect.mp3","congrats-cheers.mp3","congrats-music.mp3","explosion.mp3","female-death.mp3","hero-shoot.mp3","intro-hero-select.mp3","intro-music.mp3","level-1-bomb.mp3","level-1-city-ambiance.mp3","level-1-music.mp3","level-1-soldier-death.mp3","level-1-soldier.mp3","level-2-fireball.mp3","level-2-firerock.mp3","level-2-jungle.mp3","level-2-music.mp3","level-2-pterodactyl-death.mp3","level-2-pterodactyl.mp3","level-3-eye-blink.mp3","level-3-eye-group.mp3","level-3-eye-splat.mp3","level-3-eye-tentacle.mp3","level-3-mud-sloshing.mp3","level-3-music.mp3","level-4-boss-death.mp3","level-4-boss-fire.mp3","level-4-boss-hurt.mp3","level-4-boss-laser.mp3","level-4-cybernetic.mp3","level-4-explosions.mp3","level-4-music.mp3","male-death.mp3","powerdown.mp3","powerup.mp3","transition.mp3","wall-break.mp3"],
+        ogg: ["collect.ogg","congrats-cheers.ogg","congrats-music.ogg","explosion.ogg","female-death.ogg","hero-shoot.ogg","intro-hero-select.ogg","intro-music.ogg","level-1-bomb.ogg","level-1-city-ambiance.ogg","level-1-music.ogg","level-1-soldier-death.ogg","level-1-soldier.ogg","level-2-fireball.ogg","level-2-firerock.ogg","level-2-jungle.ogg","level-2-music.ogg","level-2-pterodactyl-death.ogg","level-2-pterodactyl.ogg","level-3-eye-blink.ogg","level-3-eye-group.ogg","level-3-eye-splat.ogg","level-3-eye-tentacle.ogg","level-3-mud-sloshing.ogg","level-3-music.ogg","level-4-boss-death.ogg","level-4-boss-fire.ogg","level-4-boss-hurt.ogg","level-4-boss-laser.ogg","level-4-cybernetic.ogg","level-4-explosions.ogg","level-4-music.ogg","male-death.ogg","powerdown.ogg","powerup.ogg","transition.ogg","wall-break.ogg"]
+    };
+
+    rpGame.content = {
+        intro: ['You, an email hero, have been tasked to save the marketing universe from certain doom by completing three levels of play. You must pass a series of challenged in order to save the future of email.'],
+        levels: {
+            1: {
+                intro: ['The city is in trouble. Somehow, all of the emails have gotten out! Now subscribers will never know about that sale they’ve been waiting for, or that their food delivery order was cancelled. But you can help!','','Collect the emails so that they can be delivered to the correct inboxes - and be sure to grab the power ups with the Return Path logo along the way. You can do it!'],
+                outro: ['Congratulations, you’re our hero! You successfully captured the lost emails and they will be delivered to their rightful inboxes.'],
+            },
+            2: {
+                intro: ['Oh no! Somehow, we\'ve reverted to a land where dinosaurs rule the Earth - and outdated versions of Outlook and Lotus Notes are the most popular email clients. Can you assist?','','Collect the emails and steer clear of the pterodactyls to help defeat old, outdated software. Remember to grab the power ups with the Return Path logo to aid in your mission. We’re betting on you!'],
+                outro: ['Wow, that was a jurassic problem but you got through it. You successfully avoided the outdated software and we’re so thankful.'],
+            },
+            3: {
+                intro: ['Oh my. There is confusion between read rates and open rates - and somehow eyeballs are all amiss. If we leave things like this, no one will have any quality metrics. Do you think you can help out one more time?','','Collect the emails and avoid the eyeballs so that the metrics can go back to normal. Remember to grab the power ups with the Return Path logo to help. It’s all eyes on you (sorry, couldn’t resist)!'],
+                outro: ['You saw things through and kept your eyes on the prize! See what we did there? Get it? We appreciate your tenacity. And you putting up with our puns.'],
+            },
+            4: {
+                intro: ['Oh my… the worst has happened. That skull-looking thing? It’s rumored that he sent the first spam email about having a Nigerian uncle. You know the one. He’s no good. Blast him and eliminate horrible spam for once and for all!'],
+            },
+        },
+        congrats: {
+            headline: ['CONGRATULATIONS!'],
+            subheadline: ['You Did It Email Hero'],
+            outro: ['We\'re so grateful, Email Hero! You were able to navigate different issues with the greatest of ease and our email marketing program is back to normal. Learn More About Email Heroes Like You!'],
+            url: 'https://returnpath.com/email-heroes/stories',
+        },
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.6.0/phaser.min.js?ver=5.1.1"></script>
+<script src="/email-heroes/assets/js/scene.js"></script>
+<script src="/email-heroes/assets/js/level.js"></script>
+<script src="/email-heroes/assets/js/demo.js"></script>
+<script src="/email-heroes/assets/js/level1.js"></script>
+<script src="/email-heroes/assets/js/level2.js"></script>
+<script src="/email-heroes/assets/js/level3.js"></script>
+<script src="/email-heroes/assets/js/level4.js"></script>
+<script src="/email-heroes/assets/js/congrats.js"></script>
+<script src="/email-heroes/assets/js/intro.js"></script>
+<script src="/email-heroes/assets/js/game.js"></script>
+
+    </body>
+</html>

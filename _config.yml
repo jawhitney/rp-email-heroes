@@ -1,0 +1,18 @@
+# Jekyll config
+
+# Site settings
+title: Guardians of the Email Universe
+email: jonathan.a.whitney@gmail.com
+baseurl: "/email-heroes"
+github_username:  jawhitney
+
+# Build settings
+markdown: kramdown
+
+# Plugins
+plugins:
+- jekyll-autoprefixer
+
+autoprefixer:
+  browsers:
+  - last 2 versions
